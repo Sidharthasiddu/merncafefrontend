@@ -1,0 +1,339 @@
+
+/* === Global === */
+body {
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+  margin: 0;
+  background: linear-gradient(135deg, #f0f4f8 0%, #dfe9f3 100%);
+  color: #1e293b;
+}
+
+.App-Container {
+  min-height: 100vh;
+}
+
+/* === Navigation Bar === */
+.header-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  background: rgba(99, 102, 241, 0.85);
+  backdrop-filter: blur(10px);
+  padding: 16px 0;
+  border-radius: 0 0 16px 16px;
+  box-shadow: 0 8px 20px rgba(99, 102, 241, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-nav a {
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.15rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.header-nav a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.08);
+}
+
+/* === Card Styling === */
+.page-card {
+  background: #ffffff;
+  border-radius: 24px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+  padding: 50px 36px;
+  margin: 50px auto;
+  max-width: 480px;
+  animation: fadeInUp 0.6s ease-in-out;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.page-title {
+  font-size: 2.2rem;
+  text-align: center;
+  font-weight: 700;
+  color: #4f46e5;
+}
+
+/* === Form Inputs & Buttons === */
+input, select, textarea {
+  width: 100%;
+  padding: 16px;
+  margin: 12px 0;
+  border: 1.5px solid #d1d5db;
+  border-radius: 12px;
+  font-size: 1.05rem;
+  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.06);
+  transition: 0.3s;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #6366f1;
+  outline: none;
+  box-shadow: 0 0 10px #6366f14a;
+}
+
+button {
+  background: linear-gradient(to right, #6366f1, #60a5fa);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 14px 24px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 16px;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.1);
+}
+
+button:hover {
+  background: linear-gradient(to right, #60a5fa, #6366f1);
+  transform: scale(1.04);
+}
+
+/* === Image === */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 16px;
+  margin: 0 auto 20px auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.02);
+}
+
+/* === Footer === */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: #f1f5f9;
+  color: #4f46e5;
+  font-weight: 600;
+  border-radius: 24px 24px 0 0;
+  margin-top: 40px;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* === Error Message === */
+.error-message {
+  color: #e63946;
+  text-align: center;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+/* === Admin Section === */
+.admin-container {
+  padding: 24px;
+  background-color: #f7f9fc;
+}
+
+.admin-content {
+  background-color: #ffffff;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+}
+
+.admin-nav a {
+  margin-right: 12px;
+  text-decoration: none;
+  color: #2c3e50;
+  font-weight: 500;
+  padding: 10px 14px;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.admin-nav a:hover {
+  background-color: #ecf0f1;
+}
+
+/* === Cart Section === */
+.cart-container {
+  padding: 30px;
+  max-width: 600px;
+  margin: auto;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.cart-item {
+  background: #fff;
+  padding: 12px 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.cart-buttons button,
+.cart-actions button {
+  background-color: #3498db;
+  border: none;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.cart-actions button {
+  background-color: #27ae60;
+}
+
+.cart-buttons button:hover {
+  background-color: #2980b9;
+}
+
+.cart-actions button:hover {
+  background-color: #219150;
+}
+
+/* === Login / Register / Profile === */
+.login-container,
+.profile-container,
+.App-Register-Row > div {
+  max-width: 450px;
+  margin: 60px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.login-container h2,
+.App-Register-Row h2,
+.profile-container h3 {
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.login-container input,
+.profile-container input,
+.App-Register-Row input {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 12px;
+}
+
+.login-container button,
+.profile-container button,
+.App-Register-Row button {
+  width: 100%;
+  background-color: #3498db;
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 16px;
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.login-container button:hover,
+.profile-container button:hover,
+.App-Register-Row button:hover {
+  background-color: #2980b9;
+}
+
+.profile-container .logout-button {
+  background-color: #e74c3c;
+}
+.profile-container .logout-button:hover {
+  background-color: #c0392b;
+}
+
+/* === Product Grid === */
+.product-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+  padding: 40px;
+  background-color: #f9fbfd;
+}
+
+.product-card {
+  background-color: white;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+}
+
+.product-card img {
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* === Tables: Orders / Users / Products === */
+table {
+  width: 95%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+table th, table td {
+  border: 1px solid #ddd;
+  padding: 14px;
+  text-align: center;
+  font-size: 14px;
+}
+
+table th {
+  background-color: #f1f5f9;
+  color: #374151;
+}
+
+table tr:nth-child(even) {
+  background-color: #f9fafb;
+}
+
+table button {
+  padding: 6px 12px;
+  font-size: 13px;
+  border-radius: 6px;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+table button:nth-child(1) {
+  background-color: #f39c12;
+}
+table button:nth-child(2) {
+  background-color: #e74c3c;
+}
+
+table button:hover {
+  opacity: 0.9;
+}
