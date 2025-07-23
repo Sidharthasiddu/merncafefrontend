@@ -11,7 +11,7 @@ export default function Header() {
     <header className="header">
       <div className="header-container">
         <div className="logo">
-          <Link to="/">ByteBrew<span> Café</span></Link>
+          <Link to="/">Shaliniiii<span>Sudheshna</span></Link>
         </div>
         <nav className="nav">
           <Link to="/">Home</Link>
